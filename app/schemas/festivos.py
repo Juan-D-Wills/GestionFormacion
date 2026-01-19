@@ -13,5 +13,5 @@ class FestivosResponse(BaseModel):
     domingos: List[date]
     total_dias: int
 
-    class Config:
+class Config:
         from_attributes = True

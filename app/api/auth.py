@@ -1,4 +1,3 @@
-
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
@@ -7,12 +6,10 @@ from app.schemas.auth import ResponseLoggin, ForgotPasswordRequest, ForgotPasswo
 from app.crud.users import get_user_by_email, reset_password, get_user_by_id
 from core.security import create_access_token, create_reset_password_token, verify_reset_password_token
 from core.database import get_db
-from core.email import send_email_async
+from core.email_service import send_email_async
 from core.config import settings
 from fastapi.security import OAuth2PasswordRequestForm
 import logging
-from datetime import datetime
-from jose import jwt, JWTError
 
 logger = logging.getLogger(__name__)
 

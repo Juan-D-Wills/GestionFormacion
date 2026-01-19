@@ -4,7 +4,6 @@ from sqlalchemy import create_engine, text, MetaData
 from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy.exc import SQLAlchemyError, OperationalError, DisconnectionError
 from sqlalchemy.pool import QueuePool
-
 from core.config import settings
 
 # Configurar el módulo de logging de Python y se usa para crear un registrador de eventos (logger)
@@ -78,7 +77,7 @@ def check_database_connection() -> bool:
         logger.error(f"Error de conexión a la base de datos: {str(e)}")
         return False
 
-# if __name__ == "__main__":
-#     resultado = check_database_connection()
-#     print("¿Conexión exitosa?:", resultado)
+if __name__ == "__main__":
+    resultado = check_database_connection()
+    print("¿Conexión exitosa?:", resultado)
 

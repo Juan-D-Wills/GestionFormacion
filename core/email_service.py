@@ -1,10 +1,7 @@
-import os
 from typing import List
 from fastapi_mail import FastMail, MessageSchema, ConnectionConfig, MessageType
 from pydantic import EmailStr, BaseModel
-from jinja2 import Template
 from core.config import settings
-import asyncio
 
 
 class EmailSchema(BaseModel):

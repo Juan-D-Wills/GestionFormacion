@@ -14,9 +14,6 @@ from app.api import resultado_aprendizaje
 from app.api import festivos
 from app.api import notificacion
 
-
-
-
 app = FastAPI()
 
 # Incluir en el objeto app los routers
